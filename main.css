@@ -16,7 +16,7 @@
 }
 .navbar-buttons{
     display: flex;
-    width: 18rem;
+    width: 23rem;
     justify-content: space-between;
 }
 .button{
@@ -52,7 +52,7 @@
     position: absolute;
     height: 100vh;
     top: 0%;
-    width: 100%;
+    /* width: 100%; */
 
     background-image: linear-gradient(rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 1));
 }
@@ -125,23 +125,31 @@
 .persons{
     margin-top: 30vh;
     display: grid;
-    grid-template-columns: 1.5fr 6fr;
+    grid-template-columns: 1.3fr 6fr;
+    background-color: rgb(188, 188, 188);
+    overflow-x: hidden;
 }
 .phead{
     text-align: left;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.3rem;
     font-weight: 500;
     color: azure;
     background-color: black;
     font-size: calc(0.7vw + 0.9rem);
+    z-index: 5;
 }
 .pname{
     text-align: right;
     padding: 1rem 1.5rem;
     font-weight: 500;
     color: red;
-    background-color: rgb(188, 188, 188);
+    transform: translateX(100%);
+    /* background-color: rgb(188, 188, 188); */
     font-size: calc(0.7vw + 0.9rem);
+    animation: move 20s linear infinite
+}
+@keyframes move {
+    to { transform: translateX(-100%); }
 }
 
 
@@ -196,22 +204,35 @@
 }
 
 
-.atcourse{
+/* .atcourse{
     display: grid;
     grid-template-columns: 1.5fr 2.5fr;
-}
+} */
 .atcontent{
     text-align: left;
-    padding: 3rem;
+    padding: 2rem;
+}
+.atgrid{
+    padding: 0 2rem;
 }
 .attext1{
     font-weight: 400;
     font-size: calc(0.7vw + 0.7rem);
+    padding: 0 2rem;
 }
 .atcontent2{
     text-align: justify;
-    padding-right: 6rem;
+    padding: 0 5rem;
 }
+#speakers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.subhead{
+    font-weight: 600;
+    font-size: calc(0.7vw + 1rem);
+}
+
 
 .c{
     padding: 1rem 5rem;
@@ -220,11 +241,14 @@
 
 /* FOOTER SECTION */
 .ftext{
-    text-align: center;
+    text-align: justify;
     font-size: x-large;
-    padding: 1em;
+    padding: 0 1em;
+    line-height: 2.5rem;
 }
-
+h2{
+    font-size: calc(0.8vw + 1rem);
+}
 #footer_1 {
     display: flex;
     justify-content: space-around;
@@ -241,10 +265,10 @@
 }
 
 #footer_1_item1 p {
-    text-align: center;
+    text-align: justify;
     text-decoration: solid;
-    font-size: larger;
-    line-height: 2.5rem;
+    /* font-size: larger; */
+    
 }
      
 #footer_1_item2{
@@ -280,12 +304,11 @@
 #footer_3_contents {
     display: flex;
     justify-content: space-around;
+    padding: 1rem;
 }
 
 #footer_3_separator {
-    border-radius: 3rem;
-    border-color: grey;
-    border-style: dotted;
+    border-left: solid 3px black;
     margin-bottom: 1.5rem;
 }
 
@@ -309,3 +332,22 @@
     color: white;
     text-underline-position: below;
 }
+
+/* @media(max_width:900px){
+    .header{
+        font-size:80px;
+    };
+    .parent{
+        font-size:80px;
+        grid-template-rows: 0.5 1.2;
+    }
+} */
+
+@media (max-width: 992px) {
+    .parent {
+        display: none;
+    }
+    #kopic{
+        display: none;
+    }
+  }
