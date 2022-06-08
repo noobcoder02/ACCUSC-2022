@@ -2,4 +2,4 @@
 
 Workshop on Advances in Carbon dioxide Capture and Utilization for Sustainable Climate 
 
-[Link to Website](https://noobcoder02.github.io/ACCUSC-2022/)
+[Link to Website](https://accusc-22.netlify.app/)
